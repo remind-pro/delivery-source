@@ -1,0 +1,23 @@
+.siteSearch{
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+
+  &__input{
+    flex-grow: 1;
+    border: none;
+    height: 40px;
+    border-radius: 26.5px;
+    padding-left: 30px;
+    outline: none;
+  }
+
+  &__pic{
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: 22px;
+    width: 24px;
+    height: 24px;
+  }
+}

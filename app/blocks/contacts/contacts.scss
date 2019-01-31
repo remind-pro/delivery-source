@@ -1,0 +1,40 @@
+.contacts{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  max-width: 440px;
+  margin: 0 20px;
+
+  &__phone{
+    @include ss-semi-25;
+  }
+
+  &__mail{
+    @include ss-reg-18;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts{
+
+    flex-grow: 0;
+
+    &__phone{
+      font-size: 17px;
+    }
+  
+    &__mail{
+      display: none;
+    }
+  }
+  
+}
+
+@media (max-width: 640px) {
+  .contacts{
+    display: none;
+
+  }
+
+}

@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'mixins';
+@import 'fontFace';
+
+//Блоки
+@import '../blocks/grid/grid';
+@import '../blocks/pageHeader/pageHeader';
+@import '../blocks/logo/logo';
+@import '../blocks/topMenu/topMenu';
+@import '../blocks/compare/compare';
+@import '../blocks/favourites/favourites';
+@import '../blocks/location/location';
+@import '../blocks/mainNav/mainNav';
+@import '../blocks/account/account';
+@import '../blocks/shoppingСart/shoppingСart';
+@import '../blocks/orderBar/orderBar';
+@import '../blocks/contacts/contacts';
+@import '../blocks/catalogBtn/catalogBtn';
+@import '../blocks/siteSearch/siteSearch';
+@import '../blocks/pageNav/pageNav';
+@import '../blocks/catalog/catalog';
+@import '../blocks/selectСity/selectСity';
+@import '../blocks/firstScreen/firstScreen';
+@import '../blocks/banners/banners';
+@import '../blocks/pagination/pagination';
+@import '../blocks/sale/sale';
+@import '../blocks/productCard/productCard';
+@import '../blocks/service/service';
+@import '../blocks/saleHits/saleHits';
+@import '../blocks/feedback/feedback';
+@import '../blocks/pageFooter/pageFooter';
+@import '../blocks/social/social';
+@import '../blocks/mobileMenu/mobileMenu';
+
+// Swiper
+@import 'swiper.min';
+
+body{
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.pageBody{
+
+  &--hidden{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+  }
+}
+
+.overlay{
+  display: none;
+  position: absolute;
+  top: 204px;
+  left: 0;
+  z-index: 2;
+  right: 0;
+  height: 300vh;
+  background: rgba(55, 55, 55, 0.4);
+
+  &--active{
+    display: block !important;
+  }
+}

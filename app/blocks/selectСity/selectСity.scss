@@ -1,0 +1,94 @@
+.selectCity{
+  display: none;
+  top: 100%;
+  left: 0;
+  position: absolute;
+  z-index: 100;
+  width: 660px;
+  height: 463px;
+  padding: 30px 28px 0 40px;
+  box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.34);
+  background: #fff;
+
+  &--active{
+    display: block;
+  }
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px 0;
+  }
+
+  &__close{
+    display: block;
+    position: relative;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+
+    &::before{
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url('../img/close.svg');
+    }
+
+    &::after{
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url('../img/close.svg');
+      transform: scale(1, -1);
+    }
+  }
+
+  &__heading{
+    display: block;
+    @include sansPro(400, 26px, normal, 0, $greyish-brown);
+    margin: 0;
+  }
+
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 68px;
+  }
+
+  &__item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  &__title{
+    @include sansPro(400, 14px, 24px, 0, $greyish-brown);
+    margin: 0;
+
+    &:hover{
+      color: $red;
+    }
+  }
+
+  &__icon{
+    display: block;
+    width: 8px;
+    height: 10px;
+    background: url('../img/location-grey.svg') no-repeat;
+    background-size: contain;
+    margin-right: 5px;
+
+    &--active{
+      background: url('../img/location.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+
+}

@@ -1,0 +1,31 @@
+.location{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__pic2{
+    width: 14px;
+    height: 6px;
+    margin-bottom: -2px;
+  }
+
+  &__pic{
+    width: 14px;
+    height: 16px;
+  }
+
+  &__item{
+    @include ss-reg-ls2-14;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .location{
+  
+    &__item{
+      font-size: 13px;
+    }
+  }
+  
+}

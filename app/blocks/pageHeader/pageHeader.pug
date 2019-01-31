@@ -1,0 +1,19 @@
+include ../logo/logo
+
++b.HEADER.pageHeader
+  include ../topMenu/topMenu
+  +e.grid
+    include ../selectСity/selectСity
+    .pageHeader__wrap
+      +e.btnWrap.menuControl
+        +e.I.menuBtn
+      +logo('logo.svg')
+      include ../contacts/contacts
+      include ../orderBar/orderBar
+      +e.A(href='').link
+        +e.SVG(role="img").pic
+          +e.USE(xlink:href="img/sprite.svg#cart")
+  +e.wrap.pageHeader__wrap--bottom
+    +e.grid
+      include ../catalogBtn/catalogBtn
+      include ../siteSearch/siteSearch

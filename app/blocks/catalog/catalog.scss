@@ -1,0 +1,45 @@
+.catalog{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 225px;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #fff;
+  border-left: 1px solid #dedede;
+  padding: 30px 120px 0 40px;
+
+  &--active{
+    display: block;
+  }
+
+  &__heading{
+    @include sansPro(400, 26px, normal, 0, $black-two);
+    margin-bottom: 6px;
+  }
+
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title{
+    @include sansPro(500, 15px, 14px, 0, $red);
+    margin: 15px 0;
+  }
+
+  &__item{
+    @include sansPro(400, 14px, 14px, 0, $greyish-brown);
+    margin-bottom: 10px;
+    
+    &:hover{
+      color: $red;
+    }
+  }
+}

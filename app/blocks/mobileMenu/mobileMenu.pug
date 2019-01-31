@@ -1,0 +1,60 @@
+-var list = ['Телевизоры и видео', 'Аудио техника', 'Игры и развлечения', 'Компьютеры', 'Телефоны', 'Фото и видеокамеры', 'Товары для дома', 'Декор для дома', 'Техника для дома', 'Техника для кухни', 'Климатическая техника', 'Авто-электроника', 'Мебель']
+-var sprite = ['tv', 'audio', 'game', 'computer', 'phone', 'photo', 'home-prod', 'decor', 'home-tech', 'kitchen', 'climat', 'auto', 'furniture'] 
+
+include ../logo/logo
+
++b.mobileMenu
+  +e.header
+    +e.close.menuControl
+    +logo('logo.svg')
+    +e.A(href='').link
+      +e.SVG(role="img").pic
+        +e.USE(xlink:href="img/sprite.svg#cart")
+  +e.wrap
+    +e.menuWrap
+      +e.list
+        +e.location.mobileMenu__menuItem
+          +e.SVG(role="img").pic2
+            +e.USE(xlink:href="img/sprite.svg#location")
+          +e.item Санкт-Петербург
+        +e.account
+          +e.A(href='').link.mobileMenu__menuItem
+            +e.SVG(role="img").pic2
+              +e.USE(xlink:href="img/sprite.svg#account")
+            |Личный кабинет
+      +e.wrapper
+        +e.catalog.mobileMenu__openNav
+          +e.I.icon
+          +e.SPAN.title Каталог товаров
+          +e.I.arrow
+      +e.list
+        +e.compare
+          +e.A(href='').link.mobileMenu__menuItem
+            +e.SVG(role="img").pic2
+              +e.USE(xlink:href="img/sprite.svg#compare-bar")
+            |Сравнение товаров
+        +e.favourites
+          +e.A(href='').link.mobileMenu__menuItem
+            +e.SVG(role="img").pic2
+              +e.USE(xlink:href="img/sprite.svg#favourites")
+            |Избранное
+      +e.list.mobileMenu__list--last
+        +e.A(href='').link.mobileMenu__menuItem
+          |Услуги
+        +e.A(href='').link.mobileMenu__menuItem
+          |О «Delivery»
+        +e.A(href='').link.mobileMenu__menuItem
+          |Помощь
+    
+    +e.nav
+      +e.heading.mobileMenu__openNav
+        +e.I.arrow.mobileMenu__arrow--back
+        +e.SPAN.back Каталог товаров
+      +e.UL.navList
+        each key, i in list
+          +e.LI.navItem
+            +e.A(href='').navLink
+              +e.SVG(role="img").navPic
+                +e.USE(xlink:href="img/sprite.svg#" + sprite[i] )
+              = key
+              +e.I.arrow.mobileMenu__arrow--nav

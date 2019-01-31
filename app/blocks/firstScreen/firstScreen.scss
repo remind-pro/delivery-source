@@ -1,0 +1,22 @@
+.firstScreen{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+@media (max-width: 1249px) and (min-width: 1101px) {
+
+  .firstScreen{
+    padding: 0 15px;
+  }
+
+}
+
+@media (max-width: 1100px){
+
+  .firstScreen{
+    display: block;
+  }
+
+}

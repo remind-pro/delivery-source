@@ -1,0 +1,338 @@
+.service{
+  display: flex;
+  flex-wrap: wrap;
+
+  &__headingWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $red;
+    padding: 0 15px;
+  }
+
+  &__heading{
+    margin: 0;
+
+    &--home{
+      display: flex;
+      flex-direction: column;
+      @include ss-bold-66;
+    }
+
+    &--grey{
+      font-size: 54px;
+      letter-spacing: .83px;
+      color: $black;
+      font-weight: 500;
+    }
+
+    &--low{
+      @include ss-bold-36;
+      text-align: center;
+    }
+
+    &--big{
+      @include ss-bold-36;
+      font-size: 86px;
+      line-height: 77px;
+    }
+
+    &--min{
+      font: 400 15px 'Source Sans Pro', Arial, sans-serif;
+      line-height: 17px;
+      letter-spacing: 0;
+      color: #fff;
+      margin-top: 19px;
+    }
+
+    &--middle2{
+      @include ss-bold-44;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__item{
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 300px;
+    background: $light-grey;
+
+    &--middle{
+      align-items: center;
+      justify-content: space-around;
+      flex-grow: 2;
+      margin-right: 30px;
+    }
+
+    &--min{
+      width: 394px;
+      height: 192px;
+      margin-bottom: 20px;
+    }
+
+    &--min2{
+      width: 394px;
+      height: 192px;
+      background: url('../img/service-center.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    &--big{
+      justify-content: space-around;
+      flex-grow: 1;
+      flex-basis: 100%;
+      margin-top: 40px;
+      background: $red;
+      height: 240px;
+      color: #fff;
+      padding: 20px;
+    }
+  }
+
+  &__pic{
+
+    &--sale{
+      flex-grow: 1;
+      height: 100%;
+      background: url('../img/sale-online.jpg') no-repeat;
+      background-size: cover;
+      background-position: right;
+    }
+
+    &--delivery{
+      width: 289px;
+      height: 214px;
+      background: url('../img/delivery.png') no-repeat;
+      background-size: contain;
+    }
+
+    &--home{
+      width: 232px;
+      height: 382px;
+      background: url('../img/chair.png') no-repeat;
+      background-size: contain;
+      margin: auto 0 0 60px;
+    }
+  }
+
+  &__description{
+    max-width: 580px;
+    @include ss-reg-18;
+    letter-spacing: 0;
+    line-height: normal;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  &__calculate{
+    width: 268px;
+    height: 40px;
+    background: #fff;
+    color: $red;
+    border: none;
+    border-radius: 22px;
+    outline: none;
+    @include ubu-14;
+  }
+
+  &__calculateText{
+    display: none;
+    @include ubu-14;
+    color: #fff;
+    margin-top: 20px;
+  }
+
+  &__link{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+
+    &--delivery{
+      display: none;
+    }
+  }
+
+}
+
+
+//************Медиа запросы**************
+
+@media (max-width: 1249px) {
+
+  .service{
+    padding: 0 15px;
+
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .service{
+    display: block;
+
+    &__wrap{
+      display: flex;
+    }
+
+    &__item{
+
+      &--middle{
+        margin: 0 0 30px 0;
+      }
+
+      &--big{
+        height: auto;
+        padding: 30px 20px;
+        margin-top: 30px;
+      }
+
+      &--min{
+        flex-grow: 1;
+        flex-basis: 50%;
+        width: auto;
+        height: 192px;
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+  
+      &--min2{
+        flex-grow: 1;
+        flex-basis: 50%;
+        width: auto;
+        height: 192px;
+        margin-left: 10px;
+      }
+    }
+
+    &__description{
+      font-size: 16px;
+      max-width: 345px;
+    }
+
+    &__heading{
+      margin: 0;
+  
+      &--home{
+        @include ss-bold-66;
+      }
+  
+      &--middle2{
+        font-size: 40px;
+      }
+    }
+
+  &__pic{
+
+    &--delivery{
+      width: 260px;
+      height: 193px;  
+    }
+
+    &--home{
+      width: 170px;
+      height: 280px;
+      margin: auto 0 0 30px;
+    }
+  }
+
+  }
+
+}
+
+
+@media (max-width: 640px) {
+  .service{
+
+    &__pic{
+
+      &--home{
+        width: 80px;
+        height: 130px;
+      }
+
+      &--delivery{
+        width: 196px;
+        height: 86px;
+      }
+    }
+
+    &__heading{
+
+      &--low{
+        font-size: 24px;
+      }
+
+      &--big{
+        font-size: 60px;
+        line-height: 60px;
+      }
+
+      &--min{
+        font-size: 14px;
+        max-width: 80px;
+      }
+
+      &--home{
+        font-size: 30px;
+      }
+
+      &--grey{
+        font-size: 20px;
+      }
+
+      &--middle2{
+        font-size: 24px;
+        margin-right: 20px;
+      }
+    }
+
+    &__item{
+      max-height: 142px;
+      height: 142px;
+
+      &--min{
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+
+      &--min2{
+        margin-left: 0;
+      }
+
+      &--big{
+        padding: 15px 10px;
+        align-items: center;
+      }
+    }
+
+    &__description{
+      display: none;
+    }
+
+    &__calculate{
+      display: none;
+    }
+
+    &__calculateText{
+      display: block;
+    }
+
+    &__link{
+
+      &--delivery{
+        display: block;
+      }
+    }
+
+    &__wrap{
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+}

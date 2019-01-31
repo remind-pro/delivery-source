@@ -1,0 +1,50 @@
+.favourites{
+  position: relative;
+
+  &__pic{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url('../img/favourites.svg') no-repeat;
+    background-size: contain;
+
+    &--card{
+      width: 20px !important;
+      height: 20px !important;
+      margin-left: 20px;
+    }
+
+    &--active{
+      background: url('../img/favourites-full.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__counter{
+    display: none;
+    position: absolute;
+    padding: 2px;
+    top: -5px;
+    right: -5px;
+    background: #f5f7f6;
+    color: $red;
+    @include sansPro(700, 11px, normal, 0, $red);
+    border-radius: 50%;
+
+    &--active{
+      display: block;
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .favourites{
+
+    &__pic{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+}

@@ -1,0 +1,28 @@
+.logo{
+
+  &__pic{
+    width: 290px;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+  .logo{
+
+    &__pic{
+      width: 230px;
+    }
+  }
+  
+}
+
+@media (max-width: 640px) {
+  .logo{
+    
+
+    &__pic{
+      width: 162px;
+    }
+  }
+}

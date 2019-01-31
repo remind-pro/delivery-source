@@ -1,0 +1,25 @@
+include ../productCard/productCard
+
++b.SECTION.sale
+  +e.header
+    +e.H2.heading Распродажа
+    +e.arrowWrap
+      +e.I.arrow.sale__arrow--prev
+      +e.I.arrow.sale__arrow--next
+  .swiper-container--sale
+    .swiper-wrapper
+      +card(1, 'swiper-slide')
+      +card(2, 'swiper-slide')
+      +card(3, 'swiper-slide')
+      +card(0, 'swiper-slide')
+      +card(4, 'swiper-slide')
+      +card(1, 'swiper-slide')
+      +card(2, 'swiper-slide')
+      +card(3, 'swiper-slide')
+      +card(0, 'swiper-slide')
+      +card(4, 'swiper-slide')
+    +b.pagination.pagination--sale
+      +e.I.item.pagination__item--active.pagination__item--sale
+      +e.I.item.pagination__item--sale
+      +e.I.item.pagination__item--sale
+      +e.I.item.pagination__item--sale

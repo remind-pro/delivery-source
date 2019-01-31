@@ -1,0 +1,88 @@
+mixin card( elem, cls )
+
+  -var test = ''
+
+  if cls !== 'undefined'
+    -test= cls
+    
+  +b(class="productCard " + test)
+    +e.dropDown
+      if elem === 1
+        +e.I.arrow
+        +e.SPAN.item.productCard__item--finalPrice Финальная цена
+        +e.SPAN.item.productCard__item--hit Хит продаж
+        +e.SPAN.item.productCard__item--benefit Выгода 40%
+        +e.SPAN.item.productCard__item--discount Скидка
+      if elem === 2
+        +e.I.arrow
+        +e.SPAN.item.productCard__item--hit Хит продаж
+        +e.SPAN.item.productCard__item--benefit Выгода 40%
+        +e.SPAN.item.productCard__item--discount Скидка
+      if elem === 3
+        +e.SPAN.item.productCard__item--benefit Выгода 40%
+      if elem === 4
+        +e.SPAN.item.productCard__item--discount Скидка
+    +e.preview
+      +e.IMG(src="../img/test-pic.jpg" alt="pic").picture
+    +e.description
+      +e.bar
+        if elem === 4
+          +b.compare
+            +e.A(href='').link
+              +e.I.pic.compare__pic--card.compare__pic--active
+          +b.favourites
+            +e.A(href='').link
+              +e.I.pic.favourites__pic--card.favourites__pic--active
+        else
+          +b.compare
+            +e.A(href='').link
+              +e.I.pic.compare__pic--card
+          +b.favourites
+            +e.A(href='').link
+              +e.I.pic.favourites__pic--card
+      +e.wrap.productCard__wrap--column
+        +e.SPAN.name Телевизор SAMSUNG
+        +e.SPAN.name SUPER LED AMOLED Smart+
+      +e.wrap
+        +e.SPAN.stock В наличии
+        if elem === 3
+          +e.volume
+            +e.SVG(role="img").star
+              +e.USE(xlink:href="img/sprite.svg#star-empty")
+            +e.SVG(role="img").star
+              +e.USE(xlink:href="img/sprite.svg#star-empty")
+            +e.SVG(role="img").star
+              +e.USE(xlink:href="img/sprite.svg#star-empty")
+            +e.SVG(role="img").star
+              +e.USE(xlink:href="img/sprite.svg#star-empty")
+            +e.SVG(role="img").star
+              +e.USE(xlink:href="img/sprite.svg#star-empty")
+        else
+          +e.volume
+            +e.SVG(role="img").star
+              +e.USE(xlink:href="img/sprite.svg#star")
+            +e.SVG(role="img").star
+              +e.USE(xlink:href="img/sprite.svg#star")
+            +e.SVG(role="img").star
+              +e.USE(xlink:href="img/sprite.svg#star")
+            +e.SVG(role="img").star
+              +e.USE(xlink:href="img/sprite.svg#star")
+            +e.SVG(role="img").star
+              +e.USE(xlink:href="img/sprite.svg#star")
+          
+      +e.price
+        +e.SPAN.currentPrice 1 539 
+          +e.SPAN.rouble ₽
+        +e.SPAN.oldPrice 2 000 
+          +e.SPAN.rouble ₽
+      +e.addWrap
+        +e.bar--mobile
+          +b.compare
+            +e.A(href='').link
+              +e.SVG(role="img").pic.compare__pic--card
+                +e.USE(xlink:href="img/sprite.svg#compare-active")
+          +b.favourites
+            +e.A(href='').link
+              +e.SVG(role="img").pic.compare__pic--card.compare__pic--card2
+                +e.USE(xlink:href="img/sprite.svg#favourites-active")
+        +e.BUTTON.add В корзину

@@ -1,0 +1,46 @@
+.catalogBtn{
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  padding: 0 17px 0 20px;
+  height: 100%;
+  margin-right: 51px;
+  cursor: pointer;
+
+  &__btn{
+    
+    &--active{
+      stroke: $red;
+    }
+  }
+  
+  &--active{
+    background: #fff;
+    color: $red;
+  }
+  
+  &--active .catalogBtn__title{
+    color: $red;
+  }
+
+  &__pic{
+    width: 24px;
+    height: 13px;
+    margin-right: 25px;
+  }
+
+  &__title{
+    @include ss-semi-18;
+
+    &--active{
+      color: $red;
+    }
+  }
+}
+
+
+@media (max-width: 640px) {
+  .catalogBtn{
+    display: none;
+  }
+}

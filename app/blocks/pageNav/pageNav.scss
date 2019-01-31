@@ -1,0 +1,131 @@
+.pageNav{
+  min-width: 225px;
+  height: 558px;
+  margin-right: 30px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.17);
+  background: #fff;
+
+  &__svg{
+    display: none;
+    margin: 0 10px 0 auto;
+
+    &--active{
+      display: block;  
+    }
+  }
+
+  &__arrow{
+
+    &--active{  
+      stroke: $red;
+    }
+  }
+
+  &--active{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    border-radius: 0;
+  }
+
+  &__list{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    padding: 19px 0 9px 22px;
+    margin: 0;
+    
+  }
+
+  &__item{
+    margin-bottom: 15px;
+  }
+
+  &__link{
+    display: flex;
+    align-items: center;
+    color: #000;
+    @include ss-reg-14;
+
+    &--active{
+      color: $red;
+    }
+  }
+
+  &__pic{
+    width: 24px;
+    height: 26px;
+    margin-right: 10px;
+  }
+
+
+}
+
+//************Медиа запросы**************
+
+@media (max-width: 1100px){
+
+  .pageNav{
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    box-shadow: none;
+    overflow: hidden;
+    
+
+    &__list{
+      flex-direction: row;
+      //overflow-x: scroll;
+      height: auto;
+      justify-content: flex-start;
+      padding: 19px 0 0 15px;
+      margin: 0;
+    }
+
+    &__item{
+      margin-right: 10px;
+      max-width: 91px;
+    }
+
+    &__pic{
+      margin: 0 0 9px 0;
+    }
+
+    &__link{
+      width: 91px;
+      height: 91px;
+      box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.17);
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-size: 13px;
+      padding: 0 3px;
+    }
+  }
+
+}
+
+
+@media (max-width: 640px){
+
+  .pageNav{
+
+    &__item{
+      margin-right: 5px;
+      max-width: 64px;
+    }
+
+    &__link{
+      width: 64px;
+      height: 70px;
+      font-size: 10px;
+      letter-spacing: 0;
+      padding: 5px;
+    }
+  }
+
+}

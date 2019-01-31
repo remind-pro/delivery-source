@@ -1,0 +1,37 @@
+include ../logo/logo
+include ../social/social
+
++b.FOOTER.pageFooter
+  +e.grid
+    +e.contactsWrap
+      +logo('logo-white.svg')
+      +e.contacts
+        +e.A(href="tel:+79650666655" title="+7 (965) 066-66-55").phone +7 (965) 066-66-55
+        +e.P.time 10:00-19:00, сб-вс с 10:00-18:00
+        +e.A(href="mailto:sale@remind-media.ru" title="sale@remind-media.ru").mail sale@remind-media.ru
+      +social
+    +e.info
+      +e.list
+        +e.item
+          +e.SPAN.heading О «Delivery»
+          +e.A(href='').link О компании
+          +e.A(href='').link Вакансии
+          +e.A(href='').link Магазины
+          +e.A(href='').link Режим работы
+
+        +e.item
+          +e.SPAN.heading Услуги
+          +e.A(href='').link Акции
+          +e.A(href='').link Бонусы
+          +e.A(href='').link Доставка
+          +e.A(href='').link Сервис
+
+        +e.item
+          +e.SPAN.heading Помощь
+          +e.A(href='').link Обратная связь
+          +e.A(href='').link Покупателям
+          +e.A(href='').link Страхование
+          +e.A(href='').link Карта сайта
+      +e.private
+        +e.A(href='').policy Политика конфиденциальности
+        +e.SPAN.copyright ©remind-media.ru Все права защищены

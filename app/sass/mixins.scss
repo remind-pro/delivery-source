@@ -1,0 +1,121 @@
+@mixin sansPro( $fw, $size, $lh, $lp, $color){
+
+  font: $fw $size 'Source Sans Pro', Arial, sans-serif;
+  line-height: $lh;
+  letter-spacing: $lp;
+  color: $color;
+
+}
+
+// Переписать в функцию
+@mixin ss-reg-12{
+  font: 400 12px 'Source Sans Pro', Arial, sans-serif;
+  line-height: 13px;
+  letter-spacing: 0;
+  color: $warm-grey-two;
+}
+
+@mixin ss-reg-14{
+  font: 400 14px 'Source Sans Pro', Arial, sans-serif;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: $greyish-brown;
+}
+
+@mixin ss-reg-ls2-14{
+  font: 400 14px 'Source Sans Pro', Arial, sans-serif;
+  line-height: 14px;
+  letter-spacing: 0.22px;
+  color: $greyish-brown;
+}
+
+@mixin ss-reg-ls3-14{
+  font: 400 14px 'Source Sans Pro', Arial, sans-serif;
+  line-height: 14px;
+  letter-spacing: 0.32px;
+  color: $greyish-brown;
+}
+
+@mixin ss-reg-16{
+  font: 400 16px 'Source Sans Pro', Arial, sans-serif;
+  line-height: 18px;
+  letter-spacing: 0.11px;
+  color: $black-two;
+}
+
+@mixin ss-reg-18{
+  font: 400 18px 'Source Sans Pro', Arial, sans-serif;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  color: $greyish-brown;
+}
+
+@mixin ss-reg-36{
+  font: 400 36px 'Source Sans Pro', Arial, sans-serif;
+  letter-spacing: 0;
+  color: $black-two;
+}
+
+@mixin ss-semi-14{
+  font: 500 14px 'Source Sans Pro', Arial, sans-serif;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: $red;
+}
+
+@mixin ss-semi-16{
+  font: 500 16px 'Source Sans Pro', Arial, sans-serif;
+  line-height: 14px;
+  letter-spacing: 0.25px;
+  color: $warm-grey;
+}
+
+@mixin ss-semi-18{
+  font: 500 18px 'Source Sans Pro', Arial, sans-serif;
+  letter-spacing: 0.28px;
+  color: #fff;
+}
+
+@mixin ss-semi-25{
+  font: 500 25px 'Source Sans Pro', Arial, sans-serif;
+  line-height: 14px;
+  letter-spacing: 0.14px;
+  color: $greyish-brown;
+}
+
+@mixin ss-bold-19{
+  font: 700 19px 'Source Sans Pro', Arial, sans-serif;
+  letter-spacing: 0;
+  color: $black-three;
+}
+
+@mixin ss-bold-36{
+  font: 700 36px 'Source Sans Pro', Arial, sans-serif;
+  letter-spacing: .55px;
+  color: #fff;
+}
+
+@mixin ss-bold-44{
+  font: 700 44px 'Source Sans Pro', Arial, sans-serif;
+  letter-spacing: .68px;
+  color: #fff;
+}
+
+@mixin ss-bold-66{
+  font: 700 66px 'Source Sans Pro', Arial, sans-serif;
+  letter-spacing: 1.02px;
+  color: $red;
+}
+
+
+@mixin ubu-14{
+  font: 500 14px 'Ubuntu', Arial, sans-serif;
+  line-height: 14px;
+  color: $red;
+}
+
+@mixin ubu-10{
+  font: 500 10px 'Ubuntu', Arial, sans-serif;
+  line-height: 16px;
+  color: #fff;
+}

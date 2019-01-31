@@ -1,0 +1,67 @@
+.social{
+  display: flex;
+  align-items: center;
+
+  &__link{
+
+    &--margin{
+      margin: 0 30px;
+    }
+  }
+
+  &__icon{
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    &--vk{
+      background: url('../img/vk.svg') no-repeat;
+      background-size: contain;
+    }
+
+    &--fb{
+      background: url('../img/fb.svg') no-repeat;
+      background-size: contain;
+    }
+
+    &--inst{
+      background: url('../img/inst.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  .social{
+
+    &__icon{
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 640px){
+  .social{
+
+    &__icon{
+      width: 19px;
+      height: 19px;
+
+    &--vk{
+      background: url('../img/vk-mob.svg') no-repeat center;
+      background-size: contain;
+    }
+
+    &--fb{
+      background: url('../img/fb-mob.svg') no-repeat;
+      background-size: contain;
+    }
+
+    &--inst{
+      background: url('../img/inst-mob.svg') no-repeat;
+      background-size: contain;
+    }
+    }
+  }
+}

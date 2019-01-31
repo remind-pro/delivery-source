@@ -1,0 +1,13 @@
+-var list = ['Телевизоры и видео', 'Аудио техника', 'Игры и развлечения', 'Компьютеры', 'Телефоны', 'Фото и видеокамеры', 'Товары для дома', 'Декор для дома', 'Техника для дома', 'Техника для кухни', 'Климатическая техника', 'Авто-электроника', 'Мебель']
+-var sprite = ['tv', 'audio', 'game', 'computer', 'phone', 'photo', 'home-prod', 'decor', 'home-tech', 'kitchen', 'climat', 'auto', 'furniture']
+
++b.NAV.pageNav.openCatalog
+  +e.UL.list
+    each key, i in list
+      +e.LI.item
+        +e.A(href='').link
+          +e.SVG(role="img").pic
+            +e.USE(xlink:href="img/sprite.svg#" + sprite[i] )
+          = key
+          +e.SVG(xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8").svg
+            +e.PATH(fill="none" fill-rule="nonzero" stroke="#DEDEDE" stroke-linecap="round" stroke-linejoin="round" d="M1 8l4-4-4-4").arrow
